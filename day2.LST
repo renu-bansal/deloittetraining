@@ -1,0 +1,2264 @@
+SQL> select nvl2(1,2,3)from dual;
+
+NVL2(1,2,3)                                                                     
+-----------                                                                     
+          2                                                                     
+
+SQL> select nvl2(0,2,3)from dual;
+
+NVL2(0,2,3)                                                                     
+-----------                                                                     
+          2                                                                     
+
+SQL> select nvl2(null,2,3)from dual;
+
+NVL2(NULL,2,3)                                                                  
+--------------                                                                  
+             3                                                                  
+
+SQL> select nvl2(null,null,3)from dual;
+
+NVL2(NULL,NULL,3)                                                               
+-----------------                                                               
+                3                                                               
+
+SQL> select nvl2(null,null,null)from dual;
+
+N                                                                               
+-                                                                               
+                                                                                
+
+SQL> select employee_id,commission_pct,nvl2(commission_pct,'available','Not Available') from employees;
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMMISSI                                        
+----------- -------------- -------------                                        
+        100                Not Available                                        
+        101                Not Available                                        
+        102                Not Available                                        
+        103                Not Available                                        
+        104                Not Available                                        
+        105                Not Available                                        
+        106                Not Available                                        
+        107                Not Available                                        
+        108                Not Available                                        
+        109                Not Available                                        
+        110                Not Available                                        
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMMISSI                                        
+----------- -------------- -------------                                        
+        111                Not Available                                        
+        112                Not Available                                        
+        113                Not Available                                        
+        114                Not Available                                        
+        115                Not Available                                        
+        116                Not Available                                        
+        117                Not Available                                        
+        118                Not Available                                        
+        119                Not Available                                        
+        120                Not Available                                        
+        121                Not Available                                        
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMMISSI                                        
+----------- -------------- -------------                                        
+        122                Not Available                                        
+        123                Not Available                                        
+        124                Not Available                                        
+        125                Not Available                                        
+        126                Not Available                                        
+        127                Not Available                                        
+        128                Not Available                                        
+        129                Not Available                                        
+        130                Not Available                                        
+        131                Not Available                                        
+        132                Not Available                                        
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMMISSI                                        
+----------- -------------- -------------                                        
+        133                Not Available                                        
+        134                Not Available                                        
+        135                Not Available                                        
+        136                Not Available                                        
+        137                Not Available                                        
+        138                Not Available                                        
+        139                Not Available                                        
+        140                Not Available                                        
+        141                Not Available                                        
+        142                Not Available                                        
+        143                Not Available                                        
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMMISSI                                        
+----------- -------------- -------------                                        
+        144                Not Available                                        
+        145             .4 available                                            
+        146             .3 available                                            
+        147             .3 available                                            
+        148             .3 available                                            
+        149             .2 available                                            
+        150             .3 available                                            
+        151            .25 available                                            
+        152            .25 available                                            
+        153             .2 available                                            
+        154             .2 available                                            
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMMISSI                                        
+----------- -------------- -------------                                        
+        155            .15 available                                            
+        156            .35 available                                            
+        157            .35 available                                            
+        158            .35 available                                            
+        159             .3 available                                            
+        160             .3 available                                            
+        161            .25 available                                            
+        162            .25 available                                            
+        163            .15 available                                            
+        164             .1 available                                            
+        165             .1 available                                            
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMMISSI                                        
+----------- -------------- -------------                                        
+        166             .1 available                                            
+        167             .1 available                                            
+        168            .25 available                                            
+        169             .2 available                                            
+        170             .2 available                                            
+        171            .15 available                                            
+        172            .15 available                                            
+        173             .1 available                                            
+        174             .3 available                                            
+        175            .25 available                                            
+        176             .2 available                                            
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMMISSI                                        
+----------- -------------- -------------                                        
+        177             .2 available                                            
+        178            .15 available                                            
+        179             .1 available                                            
+        180                Not Available                                        
+        181                Not Available                                        
+        182                Not Available                                        
+        183                Not Available                                        
+        184                Not Available                                        
+        185                Not Available                                        
+        186                Not Available                                        
+        187                Not Available                                        
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMMISSI                                        
+----------- -------------- -------------                                        
+        188                Not Available                                        
+        189                Not Available                                        
+        190                Not Available                                        
+        191                Not Available                                        
+        192                Not Available                                        
+        193                Not Available                                        
+        194                Not Available                                        
+        195                Not Available                                        
+        196                Not Available                                        
+        197                Not Available                                        
+        198                Not Available                                        
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMMISSI                                        
+----------- -------------- -------------                                        
+        199                Not Available                                        
+        200                Not Available                                        
+        201                Not Available                                        
+        202                Not Available                                        
+        203                Not Available                                        
+        204                Not Available                                        
+        205                Not Available                                        
+        206                Not Available                                        
+
+107 rows selected.
+
+SQL> select employee_id,commission_pct,nvl2(commission_pct,'available','0') from employees;
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        100                0                                                    
+        101                0                                                    
+        102                0                                                    
+        103                0                                                    
+        104                0                                                    
+        105                0                                                    
+        106                0                                                    
+        107                0                                                    
+        108                0                                                    
+        109                0                                                    
+        110                0                                                    
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        111                0                                                    
+        112                0                                                    
+        113                0                                                    
+        114                0                                                    
+        115                0                                                    
+        116                0                                                    
+        117                0                                                    
+        118                0                                                    
+        119                0                                                    
+        120                0                                                    
+        121                0                                                    
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        122                0                                                    
+        123                0                                                    
+        124                0                                                    
+        125                0                                                    
+        126                0                                                    
+        127                0                                                    
+        128                0                                                    
+        129                0                                                    
+        130                0                                                    
+        131                0                                                    
+        132                0                                                    
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        133                0                                                    
+        134                0                                                    
+        135                0                                                    
+        136                0                                                    
+        137                0                                                    
+        138                0                                                    
+        139                0                                                    
+        140                0                                                    
+        141                0                                                    
+        142                0                                                    
+        143                0                                                    
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        144                0                                                    
+        145             .4 available                                            
+        146             .3 available                                            
+        147             .3 available                                            
+        148             .3 available                                            
+        149             .2 available                                            
+        150             .3 available                                            
+        151            .25 available                                            
+        152            .25 available                                            
+        153             .2 available                                            
+        154             .2 available                                            
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        155            .15 available                                            
+        156            .35 available                                            
+        157            .35 available                                            
+        158            .35 available                                            
+        159             .3 available                                            
+        160             .3 available                                            
+        161            .25 available                                            
+        162            .25 available                                            
+        163            .15 available                                            
+        164             .1 available                                            
+        165             .1 available                                            
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        166             .1 available                                            
+        167             .1 available                                            
+        168            .25 available                                            
+        169             .2 available                                            
+        170             .2 available                                            
+        171            .15 available                                            
+        172            .15 available                                            
+        173             .1 available                                            
+        174             .3 available                                            
+        175            .25 available                                            
+        176             .2 available                                            
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        177             .2 available                                            
+        178            .15 available                                            
+        179             .1 available                                            
+        180                0                                                    
+        181                0                                                    
+        182                0                                                    
+        183                0                                                    
+        184                0                                                    
+        185                0                                                    
+        186                0                                                    
+        187                0                                                    
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        188                0                                                    
+        189                0                                                    
+        190                0                                                    
+        191                0                                                    
+        192                0                                                    
+        193                0                                                    
+        194                0                                                    
+        195                0                                                    
+        196                0                                                    
+        197                0                                                    
+        198                0                                                    
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        199                0                                                    
+        200                0                                                    
+        201                0                                                    
+        202                0                                                    
+        203                0                                                    
+        204                0                                                    
+        205                0                                                    
+        206                0                                                    
+
+107 rows selected.
+
+SQL> select employee_id,commission_pct,nvl2(commission_pct,'available','0') from employees;
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        100                0                                                    
+        101                0                                                    
+        102                0                                                    
+        103                0                                                    
+        104                0                                                    
+        105                0                                                    
+        106                0                                                    
+        107                0                                                    
+        108                0                                                    
+        109                0                                                    
+        110                0                                                    
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        111                0                                                    
+        112                0                                                    
+        113                0                                                    
+        114                0                                                    
+        115                0                                                    
+        116                0                                                    
+        117                0                                                    
+        118                0                                                    
+        119                0                                                    
+        120                0                                                    
+        121                0                                                    
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        122                0                                                    
+        123                0                                                    
+        124                0                                                    
+        125                0                                                    
+        126                0                                                    
+        127                0                                                    
+        128                0                                                    
+        129                0                                                    
+        130                0                                                    
+        131                0                                                    
+        132                0                                                    
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        133                0                                                    
+        134                0                                                    
+        135                0                                                    
+        136                0                                                    
+        137                0                                                    
+        138                0                                                    
+        139                0                                                    
+        140                0                                                    
+        141                0                                                    
+        142                0                                                    
+        143                0                                                    
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        144                0                                                    
+        145             .4 available                                            
+        146             .3 available                                            
+        147             .3 available                                            
+        148             .3 available                                            
+        149             .2 available                                            
+        150             .3 available                                            
+        151            .25 available                                            
+        152            .25 available                                            
+        153             .2 available                                            
+        154             .2 available                                            
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        155            .15 available                                            
+        156            .35 available                                            
+        157            .35 available                                            
+        158            .35 available                                            
+        159             .3 available                                            
+        160             .3 available                                            
+        161            .25 available                                            
+        162            .25 available                                            
+        163            .15 available                                            
+        164             .1 available                                            
+        165             .1 available                                            
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        166             .1 available                                            
+        167             .1 available                                            
+        168            .25 available                                            
+        169             .2 available                                            
+        170             .2 available                                            
+        171            .15 available                                            
+        172            .15 available                                            
+        173             .1 available                                            
+        174             .3 available                                            
+        175            .25 available                                            
+        176             .2 available                                            
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        177             .2 available                                            
+        178            .15 available                                            
+        179             .1 available                                            
+        180                0                                                    
+        181                0                                                    
+        182                0                                                    
+        183                0                                                    
+        184                0                                                    
+        185                0                                                    
+        186                0                                                    
+        187                0                                                    
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        188                0                                                    
+        189                0                                                    
+        190                0                                                    
+        191                0                                                    
+        192                0                                                    
+        193                0                                                    
+        194                0                                                    
+        195                0                                                    
+        196                0                                                    
+        197                0                                                    
+        198                0                                                    
+
+EMPLOYEE_ID COMMISSION_PCT NVL2(COMM                                            
+----------- -------------- ---------                                            
+        199                0                                                    
+        200                0                                                    
+        201                0                                                    
+        202                0                                                    
+        203                0                                                    
+        204                0                                                    
+        205                0                                                    
+        206                0                                                    
+
+107 rows selected.
+
+SQL> select employee_id,commission_pct,nvl2(to_char commission_pct,'N.A.') from employees;
+select employee_id,commission_pct,nvl2(to_char commission_pct,'N.A.') from employees
+                                  *
+ERROR at line 1:
+ORA-00909: invalid number of arguments 
+
+
+SQL> select employee_id,commission_pct,nvl(to_char commission_pct,'N.A.') from employees;
+select employee_id,commission_pct,nvl(to_char commission_pct,'N.A.') from employees
+                                  *
+ERROR at line 1:
+ORA-00909: invalid number of arguments 
+
+
+SQL> select employee_id,commission_pct,nvl(to_char (commission_pct),'N.A.') from employees;
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        100                N.A.                                                 
+        101                N.A.                                                 
+        102                N.A.                                                 
+        103                N.A.                                                 
+        104                N.A.                                                 
+        105                N.A.                                                 
+        106                N.A.                                                 
+        107                N.A.                                                 
+        108                N.A.                                                 
+        109                N.A.                                                 
+        110                N.A.                                                 
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        111                N.A.                                                 
+        112                N.A.                                                 
+        113                N.A.                                                 
+        114                N.A.                                                 
+        115                N.A.                                                 
+        116                N.A.                                                 
+        117                N.A.                                                 
+        118                N.A.                                                 
+        119                N.A.                                                 
+        120                N.A.                                                 
+        121                N.A.                                                 
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        122                N.A.                                                 
+        123                N.A.                                                 
+        124                N.A.                                                 
+        125                N.A.                                                 
+        126                N.A.                                                 
+        127                N.A.                                                 
+        128                N.A.                                                 
+        129                N.A.                                                 
+        130                N.A.                                                 
+        131                N.A.                                                 
+        132                N.A.                                                 
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        133                N.A.                                                 
+        134                N.A.                                                 
+        135                N.A.                                                 
+        136                N.A.                                                 
+        137                N.A.                                                 
+        138                N.A.                                                 
+        139                N.A.                                                 
+        140                N.A.                                                 
+        141                N.A.                                                 
+        142                N.A.                                                 
+        143                N.A.                                                 
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        144                N.A.                                                 
+        145             .4 .4                                                   
+        146             .3 .3                                                   
+        147             .3 .3                                                   
+        148             .3 .3                                                   
+        149             .2 .2                                                   
+        150             .3 .3                                                   
+        151            .25 .25                                                  
+        152            .25 .25                                                  
+        153             .2 .2                                                   
+        154             .2 .2                                                   
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        155            .15 .15                                                  
+        156            .35 .35                                                  
+        157            .35 .35                                                  
+        158            .35 .35                                                  
+        159             .3 .3                                                   
+        160             .3 .3                                                   
+        161            .25 .25                                                  
+        162            .25 .25                                                  
+        163            .15 .15                                                  
+        164             .1 .1                                                   
+        165             .1 .1                                                   
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        166             .1 .1                                                   
+        167             .1 .1                                                   
+        168            .25 .25                                                  
+        169             .2 .2                                                   
+        170             .2 .2                                                   
+        171            .15 .15                                                  
+        172            .15 .15                                                  
+        173             .1 .1                                                   
+        174             .3 .3                                                   
+        175            .25 .25                                                  
+        176             .2 .2                                                   
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        177             .2 .2                                                   
+        178            .15 .15                                                  
+        179             .1 .1                                                   
+        180                N.A.                                                 
+        181                N.A.                                                 
+        182                N.A.                                                 
+        183                N.A.                                                 
+        184                N.A.                                                 
+        185                N.A.                                                 
+        186                N.A.                                                 
+        187                N.A.                                                 
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        188                N.A.                                                 
+        189                N.A.                                                 
+        190                N.A.                                                 
+        191                N.A.                                                 
+        192                N.A.                                                 
+        193                N.A.                                                 
+        194                N.A.                                                 
+        195                N.A.                                                 
+        196                N.A.                                                 
+        197                N.A.                                                 
+        198                N.A.                                                 
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        199                N.A.                                                 
+        200                N.A.                                                 
+        201                N.A.                                                 
+        202                N.A.                                                 
+        203                N.A.                                                 
+        204                N.A.                                                 
+        205                N.A.                                                 
+        206                N.A.                                                 
+
+107 rows selected.
+
+SQL> select employee_id,commission_pct,nvl(to_char (commission_pct),'N.A.') from employees;
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        100                N.A.                                                 
+        101                N.A.                                                 
+        102                N.A.                                                 
+        103                N.A.                                                 
+        104                N.A.                                                 
+        105                N.A.                                                 
+        106                N.A.                                                 
+        107                N.A.                                                 
+        108                N.A.                                                 
+        109                N.A.                                                 
+        110                N.A.                                                 
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        111                N.A.                                                 
+        112                N.A.                                                 
+        113                N.A.                                                 
+        114                N.A.                                                 
+        115                N.A.                                                 
+        116                N.A.                                                 
+        117                N.A.                                                 
+        118                N.A.                                                 
+        119                N.A.                                                 
+        120                N.A.                                                 
+        121                N.A.                                                 
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        122                N.A.                                                 
+        123                N.A.                                                 
+        124                N.A.                                                 
+        125                N.A.                                                 
+        126                N.A.                                                 
+        127                N.A.                                                 
+        128                N.A.                                                 
+        129                N.A.                                                 
+        130                N.A.                                                 
+        131                N.A.                                                 
+        132                N.A.                                                 
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        133                N.A.                                                 
+        134                N.A.                                                 
+        135                N.A.                                                 
+        136                N.A.                                                 
+        137                N.A.                                                 
+        138                N.A.                                                 
+        139                N.A.                                                 
+        140                N.A.                                                 
+        141                N.A.                                                 
+        142                N.A.                                                 
+        143                N.A.                                                 
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        144                N.A.                                                 
+        145             .4 .4                                                   
+        146             .3 .3                                                   
+        147             .3 .3                                                   
+        148             .3 .3                                                   
+        149             .2 .2                                                   
+        150             .3 .3                                                   
+        151            .25 .25                                                  
+        152            .25 .25                                                  
+        153             .2 .2                                                   
+        154             .2 .2                                                   
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        155            .15 .15                                                  
+        156            .35 .35                                                  
+        157            .35 .35                                                  
+        158            .35 .35                                                  
+        159             .3 .3                                                   
+        160             .3 .3                                                   
+        161            .25 .25                                                  
+        162            .25 .25                                                  
+        163            .15 .15                                                  
+        164             .1 .1                                                   
+        165             .1 .1                                                   
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        166             .1 .1                                                   
+        167             .1 .1                                                   
+        168            .25 .25                                                  
+        169             .2 .2                                                   
+        170             .2 .2                                                   
+        171            .15 .15                                                  
+        172            .15 .15                                                  
+        173             .1 .1                                                   
+        174             .3 .3                                                   
+        175            .25 .25                                                  
+        176             .2 .2                                                   
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        177             .2 .2                                                   
+        178            .15 .15                                                  
+        179             .1 .1                                                   
+        180                N.A.                                                 
+        181                N.A.                                                 
+        182                N.A.                                                 
+        183                N.A.                                                 
+        184                N.A.                                                 
+        185                N.A.                                                 
+        186                N.A.                                                 
+        187                N.A.                                                 
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        188                N.A.                                                 
+        189                N.A.                                                 
+        190                N.A.                                                 
+        191                N.A.                                                 
+        192                N.A.                                                 
+        193                N.A.                                                 
+        194                N.A.                                                 
+        195                N.A.                                                 
+        196                N.A.                                                 
+        197                N.A.                                                 
+        198                N.A.                                                 
+
+EMPLOYEE_ID COMMISSION_PCT NVL(TO_CHAR(COMMISSION_PCT),'N.A.')                  
+----------- -------------- ----------------------------------------             
+        199                N.A.                                                 
+        200                N.A.                                                 
+        201                N.A.                                                 
+        202                N.A.                                                 
+        203                N.A.                                                 
+        204                N.A.                                                 
+        205                N.A.                                                 
+        206                N.A.                                                 
+
+107 rows selected.
+
+SQL> select employee_id,job_id,salary,"Old Sal",
+  2  decode(job-id,'sa_rep',salary*1.3,'it_prog',salary*1.2,'sa_man',salary*1.1,salary)"new sal" from employees;
+decode(job-id,'sa_rep',salary*1.3,'it_prog',salary*1.2,'sa_man',salary*1.1,salary)"new sal" from employees
+           *
+ERROR at line 2:
+ORA-00904: "ID": invalid identifier 
+
+
+SQL> decode(job_id,'sa_rep',salary*1.3,'it_prog',salary*1.2,'sa_man',salary*1.1,salary)"new sal" from employees;
+SP2-0734: unknown command beginning "decode(job..." - rest of line ignored.
+SQL> select employee_id,job_id,salary "old salary",DECODE(job_id,'sa_rep',salary*1.3,'it_prog',salary*1.2,'sa_man',salary*1.1,salary)"new sal" from employees;
+
+EMPLOYEE_ID JOB_ID     old salary    new sal                                    
+----------- ---------- ---------- ----------                                    
+        100 AD_PRES         24000      24000                                    
+        101 AD_VP           17000      17000                                    
+        102 AD_VP           17000      17000                                    
+        103 IT_PROG          9000       9000                                    
+        104 IT_PROG          6000       6000                                    
+        105 IT_PROG          4800       4800                                    
+        106 IT_PROG          4800       4800                                    
+        107 IT_PROG          4200       4200                                    
+        108 FI_MGR          12008      12008                                    
+        109 FI_ACCOUNT       9000       9000                                    
+        110 FI_ACCOUNT       8200       8200                                    
+
+EMPLOYEE_ID JOB_ID     old salary    new sal                                    
+----------- ---------- ---------- ----------                                    
+        111 FI_ACCOUNT       7700       7700                                    
+        112 FI_ACCOUNT       7800       7800                                    
+        113 FI_ACCOUNT       6900       6900                                    
+        114 PU_MAN          11000      11000                                    
+        115 PU_CLERK         3100       3100                                    
+        116 PU_CLERK         2900       2900                                    
+        117 PU_CLERK         2800       2800                                    
+        118 PU_CLERK         2600       2600                                    
+        119 PU_CLERK         2500       2500                                    
+        120 ST_MAN           8000       8000                                    
+        121 ST_MAN           8200       8200                                    
+
+EMPLOYEE_ID JOB_ID     old salary    new sal                                    
+----------- ---------- ---------- ----------                                    
+        122 ST_MAN           7900       7900                                    
+        123 ST_MAN           6500       6500                                    
+        124 ST_MAN           5800       5800                                    
+        125 ST_CLERK         3200       3200                                    
+        126 ST_CLERK         2700       2700                                    
+        127 ST_CLERK         2400       2400                                    
+        128 ST_CLERK         2200       2200                                    
+        129 ST_CLERK         3300       3300                                    
+        130 ST_CLERK         2800       2800                                    
+        131 ST_CLERK         2500       2500                                    
+        132 ST_CLERK         2100       2100                                    
+
+EMPLOYEE_ID JOB_ID     old salary    new sal                                    
+----------- ---------- ---------- ----------                                    
+        133 ST_CLERK         3300       3300                                    
+        134 ST_CLERK         2900       2900                                    
+        135 ST_CLERK         2400       2400                                    
+        136 ST_CLERK         2200       2200                                    
+        137 ST_CLERK         3600       3600                                    
+        138 ST_CLERK         3200       3200                                    
+        139 ST_CLERK         2700       2700                                    
+        140 ST_CLERK         2500       2500                                    
+        141 ST_CLERK         3500       3500                                    
+        142 ST_CLERK         3100       3100                                    
+        143 ST_CLERK         2600       2600                                    
+
+EMPLOYEE_ID JOB_ID     old salary    new sal                                    
+----------- ---------- ---------- ----------                                    
+        144 ST_CLERK         2500       2500                                    
+        145 SA_MAN          14000      14000                                    
+        146 SA_MAN          13500      13500                                    
+        147 SA_MAN          12000      12000                                    
+        148 SA_MAN          11000      11000                                    
+        149 SA_MAN          10500      10500                                    
+        150 SA_REP          10000      10000                                    
+        151 SA_REP           9500       9500                                    
+        152 SA_REP           9000       9000                                    
+        153 SA_REP           8000       8000                                    
+        154 SA_REP           7500       7500                                    
+
+EMPLOYEE_ID JOB_ID     old salary    new sal                                    
+----------- ---------- ---------- ----------                                    
+        155 SA_REP           7000       7000                                    
+        156 SA_REP          10000      10000                                    
+        157 SA_REP           9500       9500                                    
+        158 SA_REP           9000       9000                                    
+        159 SA_REP           8000       8000                                    
+        160 SA_REP           7500       7500                                    
+        161 SA_REP           7000       7000                                    
+        162 SA_REP          10500      10500                                    
+        163 SA_REP           9500       9500                                    
+        164 SA_REP           7200       7200                                    
+        165 SA_REP           6800       6800                                    
+
+EMPLOYEE_ID JOB_ID     old salary    new sal                                    
+----------- ---------- ---------- ----------                                    
+        166 SA_REP           6400       6400                                    
+        167 SA_REP           6200       6200                                    
+        168 SA_REP          11500      11500                                    
+        169 SA_REP          10000      10000                                    
+        170 SA_REP           9600       9600                                    
+        171 SA_REP           7400       7400                                    
+        172 SA_REP           7300       7300                                    
+        173 SA_REP           6100       6100                                    
+        174 SA_REP          11000      11000                                    
+        175 SA_REP           8800       8800                                    
+        176 SA_REP           8600       8600                                    
+
+EMPLOYEE_ID JOB_ID     old salary    new sal                                    
+----------- ---------- ---------- ----------                                    
+        177 SA_REP           8400       8400                                    
+        178 SA_REP           7000       7000                                    
+        179 SA_REP           6200       6200                                    
+        180 SH_CLERK         3200       3200                                    
+        181 SH_CLERK         3100       3100                                    
+        182 SH_CLERK         2500       2500                                    
+        183 SH_CLERK         2800       2800                                    
+        184 SH_CLERK         4200       4200                                    
+        185 SH_CLERK         4100       4100                                    
+        186 SH_CLERK         3400       3400                                    
+        187 SH_CLERK         3000       3000                                    
+
+EMPLOYEE_ID JOB_ID     old salary    new sal                                    
+----------- ---------- ---------- ----------                                    
+        188 SH_CLERK         3800       3800                                    
+        189 SH_CLERK         3600       3600                                    
+        190 SH_CLERK         2900       2900                                    
+        191 SH_CLERK         2500       2500                                    
+        192 SH_CLERK         4000       4000                                    
+        193 SH_CLERK         3900       3900                                    
+        194 SH_CLERK         3200       3200                                    
+        195 SH_CLERK         2800       2800                                    
+        196 SH_CLERK         3100       3100                                    
+        197 SH_CLERK         3000       3000                                    
+        198 SH_CLERK         2600       2600                                    
+
+EMPLOYEE_ID JOB_ID     old salary    new sal                                    
+----------- ---------- ---------- ----------                                    
+        199 SH_CLERK         2600       2600                                    
+        200 AD_ASST          4400       4400                                    
+        201 MK_MAN          13000      13000                                    
+        202 MK_REP           6000       6000                                    
+        203 HR_REP           6500       6500                                    
+        204 PR_REP          10000      10000                                    
+        205 AC_MGR          12008      12008                                    
+        206 AC_ACCOUNT       8300       8300                                    
+
+107 rows selected.
+
+SQL> SELECT EMPLOYEE_ID,JOB_ID,SALARY"OLD SALARY",
+  2  CASE WHEN JOB_ID='SA_REP'THEN SALARY*1.3
+  3  WHEN JOB_ID='IT_PROG'THEN SALARY*1.2
+  4  WHEN JOB_ID='SA_MAN'THEN SALARY*1.1
+  5  ELSE SALARY
+  6  END;
+END
+  *
+ERROR at line 6:
+ORA-00923: FROM keyword not found where expected 
+
+
+SQL> SELECT EMPLOYEE_ID,JOB_ID,SALARY"OLD SALARY",
+  2  CASE WHEN JOB_ID='SA_REP'THEN SALARY*1.3
+  3  WHEN JOB_ID='IT_PROG'THEN SALARY*1.2
+  4  WHEN JOB_ID='SA_MAN'THEN SALARY*1.1
+  5  ELSE SALARY
+  6  
+SQL> SELECT EMPLOYEE_ID,JOB_ID,SALARY"OLD SALARY",
+  2  CASE WHEN JOB_ID='SA_REP'THEN SALARY*1.3
+  3  WHEN JOB_ID='IT_PROG'THEN SALARY*1.2
+  4  WHEN JOB_ID='SA_MAN'THEN SALARY*1.1
+  5  ELSE SALARY;
+ELSE SALARY
+          *
+ERROR at line 5:
+ORA-00905: missing keyword 
+
+
+SQL> ELSE SALARY END "NEW SAL"FROM EMP;
+SP2-0734: unknown command beginning "ELSE SALAR..." - rest of line ignored.
+SQL> SELECT EMPLOYEE_ID,JOB_ID,SALARY"OLD SALARY",
+  2  CASE WHEN JOB_ID='SA_REP'THEN SALARY*1.3
+  3  WHEN JOB_ID='IT_PROG'THEN SALARY*1.2
+  4  WHEN JOB_ID='SA_MAN'THEN SALARY*1.1
+  5  ELSE SALARY END "NEW" FROM EMPLOYEES;
+
+EMPLOYEE_ID JOB_ID     OLD SALARY        NEW                                    
+----------- ---------- ---------- ----------                                    
+        100 AD_PRES         24000      24000                                    
+        101 AD_VP           17000      17000                                    
+        102 AD_VP           17000      17000                                    
+        103 IT_PROG          9000      10800                                    
+        104 IT_PROG          6000       7200                                    
+        105 IT_PROG          4800       5760                                    
+        106 IT_PROG          4800       5760                                    
+        107 IT_PROG          4200       5040                                    
+        108 FI_MGR          12008      12008                                    
+        109 FI_ACCOUNT       9000       9000                                    
+        110 FI_ACCOUNT       8200       8200                                    
+
+EMPLOYEE_ID JOB_ID     OLD SALARY        NEW                                    
+----------- ---------- ---------- ----------                                    
+        111 FI_ACCOUNT       7700       7700                                    
+        112 FI_ACCOUNT       7800       7800                                    
+        113 FI_ACCOUNT       6900       6900                                    
+        114 PU_MAN          11000      11000                                    
+        115 PU_CLERK         3100       3100                                    
+        116 PU_CLERK         2900       2900                                    
+        117 PU_CLERK         2800       2800                                    
+        118 PU_CLERK         2600       2600                                    
+        119 PU_CLERK         2500       2500                                    
+        120 ST_MAN           8000       8000                                    
+        121 ST_MAN           8200       8200                                    
+
+EMPLOYEE_ID JOB_ID     OLD SALARY        NEW                                    
+----------- ---------- ---------- ----------                                    
+        122 ST_MAN           7900       7900                                    
+        123 ST_MAN           6500       6500                                    
+        124 ST_MAN           5800       5800                                    
+        125 ST_CLERK         3200       3200                                    
+        126 ST_CLERK         2700       2700                                    
+        127 ST_CLERK         2400       2400                                    
+        128 ST_CLERK         2200       2200                                    
+        129 ST_CLERK         3300       3300                                    
+        130 ST_CLERK         2800       2800                                    
+        131 ST_CLERK         2500       2500                                    
+        132 ST_CLERK         2100       2100                                    
+
+EMPLOYEE_ID JOB_ID     OLD SALARY        NEW                                    
+----------- ---------- ---------- ----------                                    
+        133 ST_CLERK         3300       3300                                    
+        134 ST_CLERK         2900       2900                                    
+        135 ST_CLERK         2400       2400                                    
+        136 ST_CLERK         2200       2200                                    
+        137 ST_CLERK         3600       3600                                    
+        138 ST_CLERK         3200       3200                                    
+        139 ST_CLERK         2700       2700                                    
+        140 ST_CLERK         2500       2500                                    
+        141 ST_CLERK         3500       3500                                    
+        142 ST_CLERK         3100       3100                                    
+        143 ST_CLERK         2600       2600                                    
+
+EMPLOYEE_ID JOB_ID     OLD SALARY        NEW                                    
+----------- ---------- ---------- ----------                                    
+        144 ST_CLERK         2500       2500                                    
+        145 SA_MAN          14000      15400                                    
+        146 SA_MAN          13500      14850                                    
+        147 SA_MAN          12000      13200                                    
+        148 SA_MAN          11000      12100                                    
+        149 SA_MAN          10500      11550                                    
+        150 SA_REP          10000      13000                                    
+        151 SA_REP           9500      12350                                    
+        152 SA_REP           9000      11700                                    
+        153 SA_REP           8000      10400                                    
+        154 SA_REP           7500       9750                                    
+
+EMPLOYEE_ID JOB_ID     OLD SALARY        NEW                                    
+----------- ---------- ---------- ----------                                    
+        155 SA_REP           7000       9100                                    
+        156 SA_REP          10000      13000                                    
+        157 SA_REP           9500      12350                                    
+        158 SA_REP           9000      11700                                    
+        159 SA_REP           8000      10400                                    
+        160 SA_REP           7500       9750                                    
+        161 SA_REP           7000       9100                                    
+        162 SA_REP          10500      13650                                    
+        163 SA_REP           9500      12350                                    
+        164 SA_REP           7200       9360                                    
+        165 SA_REP           6800       8840                                    
+
+EMPLOYEE_ID JOB_ID     OLD SALARY        NEW                                    
+----------- ---------- ---------- ----------                                    
+        166 SA_REP           6400       8320                                    
+        167 SA_REP           6200       8060                                    
+        168 SA_REP          11500      14950                                    
+        169 SA_REP          10000      13000                                    
+        170 SA_REP           9600      12480                                    
+        171 SA_REP           7400       9620                                    
+        172 SA_REP           7300       9490                                    
+        173 SA_REP           6100       7930                                    
+        174 SA_REP          11000      14300                                    
+        175 SA_REP           8800      11440                                    
+        176 SA_REP           8600      11180                                    
+
+EMPLOYEE_ID JOB_ID     OLD SALARY        NEW                                    
+----------- ---------- ---------- ----------                                    
+        177 SA_REP           8400      10920                                    
+        178 SA_REP           7000       9100                                    
+        179 SA_REP           6200       8060                                    
+        180 SH_CLERK         3200       3200                                    
+        181 SH_CLERK         3100       3100                                    
+        182 SH_CLERK         2500       2500                                    
+        183 SH_CLERK         2800       2800                                    
+        184 SH_CLERK         4200       4200                                    
+        185 SH_CLERK         4100       4100                                    
+        186 SH_CLERK         3400       3400                                    
+        187 SH_CLERK         3000       3000                                    
+
+EMPLOYEE_ID JOB_ID     OLD SALARY        NEW                                    
+----------- ---------- ---------- ----------                                    
+        188 SH_CLERK         3800       3800                                    
+        189 SH_CLERK         3600       3600                                    
+        190 SH_CLERK         2900       2900                                    
+        191 SH_CLERK         2500       2500                                    
+        192 SH_CLERK         4000       4000                                    
+        193 SH_CLERK         3900       3900                                    
+        194 SH_CLERK         3200       3200                                    
+        195 SH_CLERK         2800       2800                                    
+        196 SH_CLERK         3100       3100                                    
+        197 SH_CLERK         3000       3000                                    
+        198 SH_CLERK         2600       2600                                    
+
+EMPLOYEE_ID JOB_ID     OLD SALARY        NEW                                    
+----------- ---------- ---------- ----------                                    
+        199 SH_CLERK         2600       2600                                    
+        200 AD_ASST          4400       4400                                    
+        201 MK_MAN          13000      13000                                    
+        202 MK_REP           6000       6000                                    
+        203 HR_REP           6500       6500                                    
+        204 PR_REP          10000      10000                                    
+        205 AC_MGR          12008      12008                                    
+        206 AC_ACCOUNT       8300       8300                                    
+
+107 rows selected.
+
+SQL> SELECT AVG(SALARY),SUM(SALARY),MAX(SALARY),MIN(SALARY)FROM EMPLOYEES;
+
+AVG(SALARY) SUM(SALARY) MAX(SALARY) MIN(SALARY)                                 
+----------- ----------- ----------- -----------                                 
+ 6461.83178      691416       24000        2100                                 
+
+SQL> SELECT department_id,min(salary),max(salary),avg(salary),sum(salary)from employees
+  2  where hire_date>='01-jan-2003'
+  3  group by department_id
+  4  having avg(salary)>=8000
+  5  order by department_id;
+
+DEPARTMENT_ID MIN(SALARY) MAX(SALARY) AVG(SALARY) SUM(SALARY)                   
+------------- ----------- ----------- ----------- -----------                   
+           20        6000       13000        9500       19000                   
+           80        6100       14000  8955.88235      304500                   
+           90       17000       24000       20500       41000                   
+
+SQL> SELECT department_id,min(salary),max(salary),avg(salary),sum(salary)from employees
+  2  where hire_date>='01-jan-2003';
+SELECT department_id,min(salary),max(salary),avg(salary),sum(salary)from employees
+       *
+ERROR at line 1:
+ORA-00937: not a single-group group function 
+
+
+SQL> select max(round(salary)) "MAXIMUM",MIN(round(salary)) "Minimum",sum(round(salary)) "Sum",Avg(round(salary)) "Average" from employees;
+
+   MAXIMUM    Minimum        Sum    Average                                     
+---------- ---------- ---------- ----------                                     
+     24000       2100     691416 6461.83178                                     
+
+SQL> select employee_id,max(round(salary)) "MAXIMUM",MIN(round(salary)) "Minimum",sum(round(salary)) "Sum",Avg(round(salary)) "Average"  from employees group by employee_id;
+
+EMPLOYEE_ID    MAXIMUM    Minimum        Sum    Average                         
+----------- ---------- ---------- ---------- ----------                         
+        100      24000      24000      24000      24000                         
+        101      17000      17000      17000      17000                         
+        102      17000      17000      17000      17000                         
+        103       9000       9000       9000       9000                         
+        104       6000       6000       6000       6000                         
+        105       4800       4800       4800       4800                         
+        106       4800       4800       4800       4800                         
+        107       4200       4200       4200       4200                         
+        108      12008      12008      12008      12008                         
+        109       9000       9000       9000       9000                         
+        110       8200       8200       8200       8200                         
+
+EMPLOYEE_ID    MAXIMUM    Minimum        Sum    Average                         
+----------- ---------- ---------- ---------- ----------                         
+        111       7700       7700       7700       7700                         
+        112       7800       7800       7800       7800                         
+        113       6900       6900       6900       6900                         
+        114      11000      11000      11000      11000                         
+        115       3100       3100       3100       3100                         
+        116       2900       2900       2900       2900                         
+        117       2800       2800       2800       2800                         
+        118       2600       2600       2600       2600                         
+        119       2500       2500       2500       2500                         
+        120       8000       8000       8000       8000                         
+        121       8200       8200       8200       8200                         
+
+EMPLOYEE_ID    MAXIMUM    Minimum        Sum    Average                         
+----------- ---------- ---------- ---------- ----------                         
+        122       7900       7900       7900       7900                         
+        123       6500       6500       6500       6500                         
+        124       5800       5800       5800       5800                         
+        125       3200       3200       3200       3200                         
+        126       2700       2700       2700       2700                         
+        127       2400       2400       2400       2400                         
+        128       2200       2200       2200       2200                         
+        129       3300       3300       3300       3300                         
+        130       2800       2800       2800       2800                         
+        131       2500       2500       2500       2500                         
+        132       2100       2100       2100       2100                         
+
+EMPLOYEE_ID    MAXIMUM    Minimum        Sum    Average                         
+----------- ---------- ---------- ---------- ----------                         
+        133       3300       3300       3300       3300                         
+        134       2900       2900       2900       2900                         
+        135       2400       2400       2400       2400                         
+        136       2200       2200       2200       2200                         
+        137       3600       3600       3600       3600                         
+        138       3200       3200       3200       3200                         
+        139       2700       2700       2700       2700                         
+        140       2500       2500       2500       2500                         
+        141       3500       3500       3500       3500                         
+        142       3100       3100       3100       3100                         
+        143       2600       2600       2600       2600                         
+
+EMPLOYEE_ID    MAXIMUM    Minimum        Sum    Average                         
+----------- ---------- ---------- ---------- ----------                         
+        144       2500       2500       2500       2500                         
+        145      14000      14000      14000      14000                         
+        146      13500      13500      13500      13500                         
+        147      12000      12000      12000      12000                         
+        148      11000      11000      11000      11000                         
+        149      10500      10500      10500      10500                         
+        150      10000      10000      10000      10000                         
+        151       9500       9500       9500       9500                         
+        152       9000       9000       9000       9000                         
+        153       8000       8000       8000       8000                         
+        154       7500       7500       7500       7500                         
+
+EMPLOYEE_ID    MAXIMUM    Minimum        Sum    Average                         
+----------- ---------- ---------- ---------- ----------                         
+        155       7000       7000       7000       7000                         
+        156      10000      10000      10000      10000                         
+        157       9500       9500       9500       9500                         
+        158       9000       9000       9000       9000                         
+        159       8000       8000       8000       8000                         
+        160       7500       7500       7500       7500                         
+        161       7000       7000       7000       7000                         
+        162      10500      10500      10500      10500                         
+        163       9500       9500       9500       9500                         
+        164       7200       7200       7200       7200                         
+        165       6800       6800       6800       6800                         
+
+EMPLOYEE_ID    MAXIMUM    Minimum        Sum    Average                         
+----------- ---------- ---------- ---------- ----------                         
+        166       6400       6400       6400       6400                         
+        167       6200       6200       6200       6200                         
+        168      11500      11500      11500      11500                         
+        169      10000      10000      10000      10000                         
+        170       9600       9600       9600       9600                         
+        171       7400       7400       7400       7400                         
+        172       7300       7300       7300       7300                         
+        173       6100       6100       6100       6100                         
+        174      11000      11000      11000      11000                         
+        175       8800       8800       8800       8800                         
+        176       8600       8600       8600       8600                         
+
+EMPLOYEE_ID    MAXIMUM    Minimum        Sum    Average                         
+----------- ---------- ---------- ---------- ----------                         
+        177       8400       8400       8400       8400                         
+        178       7000       7000       7000       7000                         
+        179       6200       6200       6200       6200                         
+        180       3200       3200       3200       3200                         
+        181       3100       3100       3100       3100                         
+        182       2500       2500       2500       2500                         
+        183       2800       2800       2800       2800                         
+        184       4200       4200       4200       4200                         
+        185       4100       4100       4100       4100                         
+        186       3400       3400       3400       3400                         
+        187       3000       3000       3000       3000                         
+
+EMPLOYEE_ID    MAXIMUM    Minimum        Sum    Average                         
+----------- ---------- ---------- ---------- ----------                         
+        188       3800       3800       3800       3800                         
+        189       3600       3600       3600       3600                         
+        190       2900       2900       2900       2900                         
+        191       2500       2500       2500       2500                         
+        192       4000       4000       4000       4000                         
+        193       3900       3900       3900       3900                         
+        194       3200       3200       3200       3200                         
+        195       2800       2800       2800       2800                         
+        196       3100       3100       3100       3100                         
+        197       3000       3000       3000       3000                         
+        198       2600       2600       2600       2600                         
+
+EMPLOYEE_ID    MAXIMUM    Minimum        Sum    Average                         
+----------- ---------- ---------- ---------- ----------                         
+        199       2600       2600       2600       2600                         
+        200       4400       4400       4400       4400                         
+        201      13000      13000      13000      13000                         
+        202       6000       6000       6000       6000                         
+        203       6500       6500       6500       6500                         
+        204      10000      10000      10000      10000                         
+        205      12008      12008      12008      12008                         
+        206       8300       8300       8300       8300                         
+
+107 rows selected.
+
+SQL> select job_id,max(round(salary)) "MAXIMUM",MIN(round(salary)) "Minimum",sum(round(salary)) "Sum",Avg(round(salary)) "Average"  from employees group by job_id;
+
+JOB_ID        MAXIMUM    Minimum        Sum    Average                          
+---------- ---------- ---------- ---------- ----------                          
+IT_PROG          9000       4200      28800       5760                          
+AC_MGR          12008      12008      12008      12008                          
+AC_ACCOUNT       8300       8300       8300       8300                          
+ST_MAN           8200       5800      36400       7280                          
+PU_MAN          11000      11000      11000      11000                          
+AD_ASST          4400       4400       4400       4400                          
+AD_VP           17000      17000      34000      17000                          
+SH_CLERK         4200       2500      64300       3215                          
+FI_ACCOUNT       9000       6900      39600       7920                          
+FI_MGR          12008      12008      12008      12008                          
+PU_CLERK         3100       2500      13900       2780                          
+
+JOB_ID        MAXIMUM    Minimum        Sum    Average                          
+---------- ---------- ---------- ---------- ----------                          
+SA_MAN          14000      10500      61000      12200                          
+MK_MAN          13000      13000      13000      13000                          
+PR_REP          10000      10000      10000      10000                          
+AD_PRES         24000      24000      24000      24000                          
+SA_REP          11500       6100     250500       8350                          
+MK_REP           6000       6000       6000       6000                          
+ST_CLERK         3600       2100      55700       2785                          
+HR_REP           6500       6500       6500       6500                          
+
+19 rows selected.
+
+SQL> desc employees
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPLOYEE_ID                               NOT NULL NUMBER(6)
+ FIRST_NAME                                         VARCHAR2(20)
+ LAST_NAME                                 NOT NULL VARCHAR2(25)
+ EMAIL                                     NOT NULL VARCHAR2(25)
+ PHONE_NUMBER                                       VARCHAR2(20)
+ HIRE_DATE                                 NOT NULL DATE
+ JOB_ID                                    NOT NULL VARCHAR2(10)
+ SALARY                                             NUMBER(8,2)
+ COMMISSION_PCT                                     NUMBER(2,2)
+ MANAGER_ID                                         NUMBER(6)
+ DEPARTMENT_ID                                      NUMBER(4)
+
+SQL> select employee_id,job_id from employee group by job_id;
+select employee_id,job_id from employee group by job_id
+                               *
+ERROR at line 1:
+ORA-00942: table or view does not exist 
+
+
+SQL> select employee_id,job_id from employees group by job_id;
+select employee_id,job_id from employees group by job_id
+       *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression 
+
+
+SQL> select employee_id,job_id from employees group by employee_id;
+select employee_id,job_id from employees group by employee_id
+                   *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression 
+
+
+SQL> select employee_id,job_id from employees group by employee_id,job_id;
+
+EMPLOYEE_ID JOB_ID                                                              
+----------- ----------                                                          
+        112 FI_ACCOUNT                                                          
+        117 PU_CLERK                                                            
+        156 SA_REP                                                              
+        162 SA_REP                                                              
+        165 SA_REP                                                              
+        174 SA_REP                                                              
+        178 SA_REP                                                              
+        127 ST_CLERK                                                            
+        135 ST_CLERK                                                            
+        136 ST_CLERK                                                            
+        140 ST_CLERK                                                            
+
+EMPLOYEE_ID JOB_ID                                                              
+----------- ----------                                                          
+        144 ST_CLERK                                                            
+        111 FI_ACCOUNT                                                          
+        202 MK_REP                                                              
+        150 SA_REP                                                              
+        151 SA_REP                                                              
+        152 SA_REP                                                              
+        163 SA_REP                                                              
+        170 SA_REP                                                              
+        177 SA_REP                                                              
+        182 SH_CLERK                                                            
+        132 ST_CLERK                                                            
+
+EMPLOYEE_ID JOB_ID                                                              
+----------- ----------                                                          
+        134 ST_CLERK                                                            
+        143 ST_CLERK                                                            
+        124 ST_MAN                                                              
+        102 AD_VP                                                               
+        113 FI_ACCOUNT                                                          
+        106 IT_PROG                                                             
+        204 PR_REP                                                              
+        118 PU_CLERK                                                            
+        167 SA_REP                                                              
+        175 SA_REP                                                              
+        190 SH_CLERK                                                            
+
+EMPLOYEE_ID JOB_ID                                                              
+----------- ----------                                                          
+        195 SH_CLERK                                                            
+        110 FI_ACCOUNT                                                          
+        145 SA_MAN                                                              
+        146 SA_MAN                                                              
+        149 SA_MAN                                                              
+        153 SA_REP                                                              
+        155 SA_REP                                                              
+        157 SA_REP                                                              
+        168 SA_REP                                                              
+        173 SA_REP                                                              
+        183 SH_CLERK                                                            
+
+EMPLOYEE_ID JOB_ID                                                              
+----------- ----------                                                          
+        185 SH_CLERK                                                            
+        189 SH_CLERK                                                            
+        196 SH_CLERK                                                            
+        198 SH_CLERK                                                            
+        125 ST_CLERK                                                            
+        129 ST_CLERK                                                            
+        205 AC_MGR                                                              
+        203 HR_REP                                                              
+        104 IT_PROG                                                             
+        105 IT_PROG                                                             
+        115 PU_CLERK                                                            
+
+EMPLOYEE_ID JOB_ID                                                              
+----------- ----------                                                          
+        114 PU_MAN                                                              
+        160 SA_REP                                                              
+        164 SA_REP                                                              
+        176 SA_REP                                                              
+        179 SA_REP                                                              
+        180 SH_CLERK                                                            
+        191 SH_CLERK                                                            
+        123 ST_MAN                                                              
+        206 AC_ACCOUNT                                                          
+        100 AD_PRES                                                             
+        101 AD_VP                                                               
+
+EMPLOYEE_ID JOB_ID                                                              
+----------- ----------                                                          
+        109 FI_ACCOUNT                                                          
+        107 IT_PROG                                                             
+        116 PU_CLERK                                                            
+        158 SA_REP                                                              
+        159 SA_REP                                                              
+        161 SA_REP                                                              
+        166 SA_REP                                                              
+        187 SH_CLERK                                                            
+        194 SH_CLERK                                                            
+        133 ST_CLERK                                                            
+        137 ST_CLERK                                                            
+
+EMPLOYEE_ID JOB_ID                                                              
+----------- ----------                                                          
+        138 ST_CLERK                                                            
+        120 ST_MAN                                                              
+        121 ST_MAN                                                              
+        200 AD_ASST                                                             
+        108 FI_MGR                                                              
+        103 IT_PROG                                                             
+        201 MK_MAN                                                              
+        147 SA_MAN                                                              
+        171 SA_REP                                                              
+        172 SA_REP                                                              
+        184 SH_CLERK                                                            
+
+EMPLOYEE_ID JOB_ID                                                              
+----------- ----------                                                          
+        188 SH_CLERK                                                            
+        197 SH_CLERK                                                            
+        141 ST_CLERK                                                            
+        122 ST_MAN                                                              
+        119 PU_CLERK                                                            
+        148 SA_MAN                                                              
+        154 SA_REP                                                              
+        169 SA_REP                                                              
+        181 SH_CLERK                                                            
+        186 SH_CLERK                                                            
+        192 SH_CLERK                                                            
+
+EMPLOYEE_ID JOB_ID                                                              
+----------- ----------                                                          
+        193 SH_CLERK                                                            
+        199 SH_CLERK                                                            
+        126 ST_CLERK                                                            
+        128 ST_CLERK                                                            
+        130 ST_CLERK                                                            
+        131 ST_CLERK                                                            
+        139 ST_CLERK                                                            
+        142 ST_CLERK                                                            
+
+107 rows selected.
+
+SQL> select count(employee_id),job_id from employees group by employee_id,job_id;
+
+COUNT(EMPLOYEE_ID) JOB_ID                                                       
+------------------ ----------                                                   
+                 1 FI_ACCOUNT                                                   
+                 1 PU_CLERK                                                     
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 ST_CLERK                                                     
+                 1 ST_CLERK                                                     
+                 1 ST_CLERK                                                     
+                 1 ST_CLERK                                                     
+
+COUNT(EMPLOYEE_ID) JOB_ID                                                       
+------------------ ----------                                                   
+                 1 ST_CLERK                                                     
+                 1 FI_ACCOUNT                                                   
+                 1 MK_REP                                                       
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SH_CLERK                                                     
+                 1 ST_CLERK                                                     
+
+COUNT(EMPLOYEE_ID) JOB_ID                                                       
+------------------ ----------                                                   
+                 1 ST_CLERK                                                     
+                 1 ST_CLERK                                                     
+                 1 ST_MAN                                                       
+                 1 AD_VP                                                        
+                 1 FI_ACCOUNT                                                   
+                 1 IT_PROG                                                      
+                 1 PR_REP                                                       
+                 1 PU_CLERK                                                     
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SH_CLERK                                                     
+
+COUNT(EMPLOYEE_ID) JOB_ID                                                       
+------------------ ----------                                                   
+                 1 SH_CLERK                                                     
+                 1 FI_ACCOUNT                                                   
+                 1 SA_MAN                                                       
+                 1 SA_MAN                                                       
+                 1 SA_MAN                                                       
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SH_CLERK                                                     
+
+COUNT(EMPLOYEE_ID) JOB_ID                                                       
+------------------ ----------                                                   
+                 1 SH_CLERK                                                     
+                 1 SH_CLERK                                                     
+                 1 SH_CLERK                                                     
+                 1 SH_CLERK                                                     
+                 1 ST_CLERK                                                     
+                 1 ST_CLERK                                                     
+                 1 AC_MGR                                                       
+                 1 HR_REP                                                       
+                 1 IT_PROG                                                      
+                 1 IT_PROG                                                      
+                 1 PU_CLERK                                                     
+
+COUNT(EMPLOYEE_ID) JOB_ID                                                       
+------------------ ----------                                                   
+                 1 PU_MAN                                                       
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SH_CLERK                                                     
+                 1 SH_CLERK                                                     
+                 1 ST_MAN                                                       
+                 1 AC_ACCOUNT                                                   
+                 1 AD_PRES                                                      
+                 1 AD_VP                                                        
+
+COUNT(EMPLOYEE_ID) JOB_ID                                                       
+------------------ ----------                                                   
+                 1 FI_ACCOUNT                                                   
+                 1 IT_PROG                                                      
+                 1 PU_CLERK                                                     
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SH_CLERK                                                     
+                 1 SH_CLERK                                                     
+                 1 ST_CLERK                                                     
+                 1 ST_CLERK                                                     
+
+COUNT(EMPLOYEE_ID) JOB_ID                                                       
+------------------ ----------                                                   
+                 1 ST_CLERK                                                     
+                 1 ST_MAN                                                       
+                 1 ST_MAN                                                       
+                 1 AD_ASST                                                      
+                 1 FI_MGR                                                       
+                 1 IT_PROG                                                      
+                 1 MK_MAN                                                       
+                 1 SA_MAN                                                       
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SH_CLERK                                                     
+
+COUNT(EMPLOYEE_ID) JOB_ID                                                       
+------------------ ----------                                                   
+                 1 SH_CLERK                                                     
+                 1 SH_CLERK                                                     
+                 1 ST_CLERK                                                     
+                 1 ST_MAN                                                       
+                 1 PU_CLERK                                                     
+                 1 SA_MAN                                                       
+                 1 SA_REP                                                       
+                 1 SA_REP                                                       
+                 1 SH_CLERK                                                     
+                 1 SH_CLERK                                                     
+                 1 SH_CLERK                                                     
+
+COUNT(EMPLOYEE_ID) JOB_ID                                                       
+------------------ ----------                                                   
+                 1 SH_CLERK                                                     
+                 1 SH_CLERK                                                     
+                 1 ST_CLERK                                                     
+                 1 ST_CLERK                                                     
+                 1 ST_CLERK                                                     
+                 1 ST_CLERK                                                     
+                 1 ST_CLERK                                                     
+                 1 ST_CLERK                                                     
+
+107 rows selected.
+
+SQL> select count(employee_id),job_id from employees group by job_id;
+
+COUNT(EMPLOYEE_ID) JOB_ID                                                       
+------------------ ----------                                                   
+                 1 AC_ACCOUNT                                                   
+                 1 AC_MGR                                                       
+                 1 AD_ASST                                                      
+                 1 AD_PRES                                                      
+                 2 AD_VP                                                        
+                 5 FI_ACCOUNT                                                   
+                 1 FI_MGR                                                       
+                 1 HR_REP                                                       
+                 5 IT_PROG                                                      
+                 1 MK_MAN                                                       
+                 1 MK_REP                                                       
+
+COUNT(EMPLOYEE_ID) JOB_ID                                                       
+------------------ ----------                                                   
+                 1 PR_REP                                                       
+                 5 PU_CLERK                                                     
+                 1 PU_MAN                                                       
+                 5 SA_MAN                                                       
+                30 SA_REP                                                       
+                20 SH_CLERK                                                     
+                20 ST_CLERK                                                     
+                 5 ST_MAN                                                       
+
+19 rows selected.
+
+SQL> select count(manager_id) "Number of Managers" from employees;
+
+Number of Managers                                                              
+------------------                                                              
+               106                                                              
+
+SQL> select count(manager_id) "Number of Managers" from employees group by manager_id;
+
+Number of Managers                                                              
+------------------                                                              
+                14                                                              
+                 5                                                              
+                 1                                                              
+                 4                                                              
+                 5                                                              
+                 5                                                              
+                 8                                                              
+                 8                                                              
+                 8                                                              
+                 8                                                              
+                 8                                                              
+
+Number of Managers                                                              
+------------------                                                              
+                 6                                                              
+                 6                                                              
+                 6                                                              
+                 6                                                              
+                 6                                                              
+                 1                                                              
+                 1                                                              
+
+18 rows selected.
+
+SQL> select max(salary)-min(salary) "DIFFERENCE" from employees;
+
+DIFFERENCE                                                                      
+----------                                                                      
+     21900                                                                      
+
+SQL> select max(salary)-min(salary) "DIFFERENCE" from employees group by employee_id;
+
+DIFFERENCE                                                                      
+----------                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+
+DIFFERENCE                                                                      
+----------                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+
+DIFFERENCE                                                                      
+----------                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+
+DIFFERENCE                                                                      
+----------                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+
+DIFFERENCE                                                                      
+----------                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+
+DIFFERENCE                                                                      
+----------                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+
+DIFFERENCE                                                                      
+----------                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+
+DIFFERENCE                                                                      
+----------                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+
+DIFFERENCE                                                                      
+----------                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+
+DIFFERENCE                                                                      
+----------                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+         0                                                                      
+
+107 rows selected.
+
+SQL> select employee_id, max(salary)-min(salary) "DIFFERENCE" from employees group by employee_id;
+
+EMPLOYEE_ID DIFFERENCE                                                          
+----------- ----------                                                          
+        100          0                                                          
+        101          0                                                          
+        102          0                                                          
+        103          0                                                          
+        104          0                                                          
+        105          0                                                          
+        106          0                                                          
+        107          0                                                          
+        108          0                                                          
+        109          0                                                          
+        110          0                                                          
+
+EMPLOYEE_ID DIFFERENCE                                                          
+----------- ----------                                                          
+        111          0                                                          
+        112          0                                                          
+        113          0                                                          
+        114          0                                                          
+        115          0                                                          
+        116          0                                                          
+        117          0                                                          
+        118          0                                                          
+        119          0                                                          
+        120          0                                                          
+        121          0                                                          
+
+EMPLOYEE_ID DIFFERENCE                                                          
+----------- ----------                                                          
+        122          0                                                          
+        123          0                                                          
+        124          0                                                          
+        125          0                                                          
+        126          0                                                          
+        127          0                                                          
+        128          0                                                          
+        129          0                                                          
+        130          0                                                          
+        131          0                                                          
+        132          0                                                          
+
+EMPLOYEE_ID DIFFERENCE                                                          
+----------- ----------                                                          
+        133          0                                                          
+        134          0                                                          
+        135          0                                                          
+        136          0                                                          
+        137          0                                                          
+        138          0                                                          
+        139          0                                                          
+        140          0                                                          
+        141          0                                                          
+        142          0                                                          
+        143          0                                                          
+
+EMPLOYEE_ID DIFFERENCE                                                          
+----------- ----------                                                          
+        144          0                                                          
+        145          0                                                          
+        146          0                                                          
+        147          0                                                          
+        148          0                                                          
+        149          0                                                          
+        150          0                                                          
+        151          0                                                          
+        152          0                                                          
+        153          0                                                          
+        154          0                                                          
+
+EMPLOYEE_ID DIFFERENCE                                                          
+----------- ----------                                                          
+        155          0                                                          
+        156          0                                                          
+        157          0                                                          
+        158          0                                                          
+        159          0                                                          
+        160          0                                                          
+        161          0                                                          
+        162          0                                                          
+        163          0                                                          
+        164          0                                                          
+        165          0                                                          
+
+EMPLOYEE_ID DIFFERENCE                                                          
+----------- ----------                                                          
+        166          0                                                          
+        167          0                                                          
+        168          0                                                          
+        169          0                                                          
+        170          0                                                          
+        171          0                                                          
+        172          0                                                          
+        173          0                                                          
+        174          0                                                          
+        175          0                                                          
+        176          0                                                          
+
+EMPLOYEE_ID DIFFERENCE                                                          
+----------- ----------                                                          
+        177          0                                                          
+        178          0                                                          
+        179          0                                                          
+        180          0                                                          
+        181          0                                                          
+        182          0                                                          
+        183          0                                                          
+        184          0                                                          
+        185          0                                                          
+        186          0                                                          
+        187          0                                                          
+
+EMPLOYEE_ID DIFFERENCE                                                          
+----------- ----------                                                          
+        188          0                                                          
+        189          0                                                          
+        190          0                                                          
+        191          0                                                          
+        192          0                                                          
+        193          0                                                          
+        194          0                                                          
+        195          0                                                          
+        196          0                                                          
+        197          0                                                          
+        198          0                                                          
+
+EMPLOYEE_ID DIFFERENCE                                                          
+----------- ----------                                                          
+        199          0                                                          
+        200          0                                                          
+        201          0                                                          
+        202          0                                                          
+        203          0                                                          
+        204          0                                                          
+        205          0                                                          
+        206          0                                                          
+
+107 rows selected.
+
+SQL> desc employees
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPLOYEE_ID                               NOT NULL NUMBER(6)
+ FIRST_NAME                                         VARCHAR2(20)
+ LAST_NAME                                 NOT NULL VARCHAR2(25)
+ EMAIL                                     NOT NULL VARCHAR2(25)
+ PHONE_NUMBER                                       VARCHAR2(20)
+ HIRE_DATE                                 NOT NULL DATE
+ JOB_ID                                    NOT NULL VARCHAR2(10)
+ SALARY                                             NUMBER(8,2)
+ COMMISSION_PCT                                     NUMBER(2,2)
+ MANAGER_ID                                         NUMBER(6)
+ DEPARTMENT_ID                                      NUMBER(4)
+
+SQL> select employee_id,min(salary) from employees where manager_id IS NOT NULL group by (salary)>6000 order by min(salary) desc;
+select employee_id,min(salary) from employees where manager_id IS NOT NULL group by (salary)>6000 order by min(salary) desc
+                                                                                            *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended 
+
+
+SQL> select employee_id,min(salary) from employees where manager_id IS NOT NULL group by ((salary)>6000) order by min(salary) desc;
+select employee_id,min(salary) from employees where manager_id IS NOT NULL group by ((salary)>6000) order by min(salary) desc
+                                                                                             *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+SQL> select employee_id,min(salary) from employees where manager_id IS NOT NULL group by min(salary)>6000 order by min(salary) desc;
+select employee_id,min(salary) from employees where manager_id IS NOT NULL group by min(salary)>6000 order by min(salary) desc
+                                                                                    *
+ERROR at line 1:
+ORA-00934: group function is not allowed here 
+
+
+SQL> select manager_id,min(salary) from employees where manager_id IS NOT NULL group by manager_id having (salary)>6000 order by min(salary) desc;
+select manager_id,min(salary) from employees where manager_id IS NOT NULL group by manager_id having (salary)>6000 order by min(salary) desc
+                                                                                                      *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression 
+
+
+SQL> select manager_id,min(salary) from employees where manager_id IS NOT NULL group by manager_id having (salary)>6000 order by min(salary) desc;
+select manager_id,min(salary) from employees where manager_id IS NOT NULL group by manager_id having (salary)>6000 order by min(salary) desc
+                                                                                                      *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression 
+
+
+SQL> select manager_id,min(salary) from employees where manager_id IS NOT NULL group by manager_id having min(salary)>6000 order by min(salary) desc;
+
+MANAGER_ID MIN(SALARY)                                                          
+---------- -----------                                                          
+       102        9000                                                          
+       205        8300                                                          
+       145        7000                                                          
+       146        7000                                                          
+       108        6900                                                          
+       147        6200                                                          
+       149        6200                                                          
+       148        6100                                                          
+
+8 rows selected.
+
+SQL> select count(employee_id),job_id from employees order by job_id;
+select count(employee_id),job_id from employees order by job_id
+                          *
+ERROR at line 1:
+ORA-00937: not a single-group group function 
+
+
+SQL> select count(employee_id),job_id from employees group by job_id;
+
+COUNT(EMPLOYEE_ID) JOB_ID                                                       
+------------------ ----------                                                   
+                 1 AC_ACCOUNT                                                   
+                 1 AC_MGR                                                       
+                 1 AD_ASST                                                      
+                 1 AD_PRES                                                      
+                 2 AD_VP                                                        
+                 5 FI_ACCOUNT                                                   
+                 1 FI_MGR                                                       
+                 1 HR_REP                                                       
+                 5 IT_PROG                                                      
+                 1 MK_MAN                                                       
+                 1 MK_REP                                                       
+
+COUNT(EMPLOYEE_ID) JOB_ID                                                       
+------------------ ----------                                                   
+                 1 PR_REP                                                       
+                 5 PU_CLERK                                                     
+                 1 PU_MAN                                                       
+                 5 SA_MAN                                                       
+                30 SA_REP                                                       
+                20 SH_CLERK                                                     
+                20 ST_CLERK                                                     
+                 5 ST_MAN                                                       
+
+19 rows selected.
+
+SQL> select count(employee_id) "Total",DECODE(HIRE_DATE,'2007',COUNT(EMPLOYEE_ID))"2007",DECODE(HIRE_DATE,'2008',COUNT(EMPLOYEE_ID))"2008",DECODE(HIRE_DATE,'2009',COUNT(EMPLOYEE_ID))"2009",DECODE(HIRE_DATE,'2010',COUNT(EMPLOYEE_ID))"2010"FROM EMPLOYEES;
+select count(employee_id) "Total",DECODE(HIRE_DATE,'2007',COUNT(EMPLOYEE_ID))"2007",DECODE(HIRE_DATE,'2008',COUNT(EMPLOYEE_ID))"2008",DECODE(HIRE_DATE,'2009',COUNT(EMPLOYEE_ID))"2009",DECODE(HIRE_DATE,'2010',COUNT(EMPLOYEE_ID))"2010"FROM EMPLOYEES
+                                         *
+ERROR at line 1:
+ORA-00937: not a single-group group function 
+
+
+SQL> select count(*) "Total",SUM(DECODE(TO_CHAR(HIRE_DATE,'YYYY'),2007,1,0)"2007",SUM(DECODE(TO_CHAR(HIRE_DATE,'YYYY'),2008,1,0)"2008",SUM(DECODE(TO_CHAR(HIRE_DATE,'YYYY'),2009,1,0)"2009",SUM(DECODE(TO_CHAR(HIRE_DATE,'YYYY'),2010,1,0)"2010" FROM EMPLOYEES;
+select count(*) "Total",SUM(DECODE(TO_CHAR(HIRE_DATE,'YYYY'),2007,1,0)"2007",SUM(DECODE(TO_CHAR(HIRE_DATE,'YYYY'),2008,1,0)"2008",SUM(DECODE(TO_CHAR(HIRE_DATE,'YYYY'),2009,1,0)"2009",SUM(DECODE(TO_CHAR(HIRE_DATE,'YYYY'),2010,1,0)"2010" FROM EMPLOYEES
+                                                                      *
+ERROR at line 1:
+ORA-00907: missing right parenthesis 
+
+
+SQL> select count(*) "Total",SUM(DECODE(TO_CHAR(HIRE_DATE,'YYYY'),2007,1,0))"2007",SUM(DECODE(TO_CHAR(HIRE_DATE,'YYYY'),2008,1,0))"2008",SUM(DECODE(TO_CHAR(HIRE_DATE,'YYYY'),2009,1,0))"2009",SUM(DECODE(TO_CHAR(HIRE_DATE,'YYYY'),2010,1,0))"2010" FROM EMPLOYEES;
+
+     Total       2007       2008       2009       2010                          
+---------- ---------- ---------- ---------- ----------                          
+       107         19         11          0          0                          
+
+SQL> select JOB_ID,SALARY,SUM(DECODE(DEPARTMENT_ID,20,1,0))"20",SUM(DECODE(DEPARTMENT_ID,50,1,0))"50",SUM(DECODE(DEPARTMENT_ID,80,1,0))"80",SUM(DECODE(DEPARTMENT_ID,90,1,0))"90" FROM EMPLOYEES;
+select JOB_ID,SALARY,SUM(DECODE(DEPARTMENT_ID,20,1,0))"20",SUM(DECODE(DEPARTMENT_ID,50,1,0))"50",SUM(DECODE(DEPARTMENT_ID,80,1,0))"80",SUM(DECODE(DEPARTMENT_ID,90,1,0))"90" FROM EMPLOYEES
+       *
+ERROR at line 1:
+ORA-00937: not a single-group group function 
+
+
+SQL> select JOB_ID,SUM(SALARY),SUM(DECODE(DEPARTMENT_ID,20,1,0))"20",SUM(DECODE(DEPARTMENT_ID,50,1,0))"50",SUM(DECODE(DEPARTMENT_ID,80,1,0))"80",SUM(DECODE(DEPARTMENT_ID,90,1,0))"90" FROM EMPLOYEES;
+select JOB_ID,SUM(SALARY),SUM(DECODE(DEPARTMENT_ID,20,1,0))"20",SUM(DECODE(DEPARTMENT_ID,50,1,0))"50",SUM(DECODE(DEPARTMENT_ID,80,1,0))"80",SUM(DECODE(DEPARTMENT_ID,90,1,0))"90" FROM EMPLOYEES
+       *
+ERROR at line 1:
+ORA-00937: not a single-group group function 
+
+
+SQL> select JOB_ID,,SUM(DECODE(DEPARTMENT_ID,20,SALARY,0))"20",SUM(DECODE(DEPARTMENT_ID,50,SALARY,0))"50",SUM(DECODE(DEPARTMENT_ID,80,SALARY,0))"80",SUM(DECODE(DEPARTMENT_ID,90,SALARY,0))"90" FROM EMPLOYEES;
+select JOB_ID,,SUM(DECODE(DEPARTMENT_ID,20,SALARY,0))"20",SUM(DECODE(DEPARTMENT_ID,50,SALARY,0))"50",SUM(DECODE(DEPARTMENT_ID,80,SALARY,0))"80",SUM(DECODE(DEPARTMENT_ID,90,SALARY,0))"90" FROM EMPLOYEES
+              *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> select JOB_ID,,SUM(DECODE(DEPARTMENT_ID,20,SALARY,0))"20",SUM(DECODE(DEPARTMENT_ID,50,SALARY,0))"50",SUM(DECODE(DEPARTMENT_ID,80,SALARY,0))"80",SUM(DECODE(DEPARTMENT_ID,90,SALARY,0))"90" FROM EMPLOYEES GROUP BY JOB_ID;
+select JOB_ID,,SUM(DECODE(DEPARTMENT_ID,20,SALARY,0))"20",SUM(DECODE(DEPARTMENT_ID,50,SALARY,0))"50",SUM(DECODE(DEPARTMENT_ID,80,SALARY,0))"80",SUM(DECODE(DEPARTMENT_ID,90,SALARY,0))"90" FROM EMPLOYEES GROUP BY JOB_ID
+              *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> select JOB_ID,,SUM(DECODE(DEPARTMENT_ID,20,SALARY))"20",SUM(DECODE(DEPARTMENT_ID,50,SALARY))"50",SUM(DECODE(DEPARTMENT_ID,80,SALARY))"80",SUM(DECODE(DEPARTMENT_ID,90,SALARY))"90" FROM EMPLOYEES GROUP BY JOB_ID;
+select JOB_ID,,SUM(DECODE(DEPARTMENT_ID,20,SALARY))"20",SUM(DECODE(DEPARTMENT_ID,50,SALARY))"50",SUM(DECODE(DEPARTMENT_ID,80,SALARY))"80",SUM(DECODE(DEPARTMENT_ID,90,SALARY))"90" FROM EMPLOYEES GROUP BY JOB_ID
+              *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> select JOB_ID,SUM(DECODE(DEPARTMENT_ID,20,SALARY))"20",SUM(DECODE(DEPARTMENT_ID,50,SALARY))"50",SUM(DECODE(DEPARTMENT_ID,80,SALARY))"80",SUM(DECODE(DEPARTMENT_ID,90,SALARY))"90" FROM EMPLOYEES GROUP BY JOB_ID;
+
+JOB_ID             20         50         80         90                          
+---------- ---------- ---------- ---------- ----------                          
+IT_PROG                                                                         
+AC_MGR                                                                          
+AC_ACCOUNT                                                                      
+ST_MAN                     36400                                                
+PU_MAN                                                                          
+AD_ASST                                                                         
+AD_VP                                            34000                          
+SH_CLERK                   64300                                                
+FI_ACCOUNT                                                                      
+FI_MGR                                                                          
+PU_CLERK                                                                        
+
+JOB_ID             20         50         80         90                          
+---------- ---------- ---------- ---------- ----------                          
+SA_MAN                                61000                                     
+MK_MAN          13000                                                           
+PR_REP                                                                          
+AD_PRES                                          24000                          
+SA_REP                               243500                                     
+MK_REP           6000                                                           
+ST_CLERK                   55700                                                
+HR_REP                                                                          
+
+19 rows selected.
+
+SQL> SELECT MANAGER_ID FROM EMPLOYEES WHERE MANAGER_ID<120;
+
+MANAGER_ID                                                                      
+----------                                                                      
+       100                                                                      
+       100                                                                      
+       100                                                                      
+       100                                                                      
+       100                                                                      
+       100                                                                      
+       100                                                                      
+       100                                                                      
+       100                                                                      
+       100                                                                      
+       100                                                                      
+
+MANAGER_ID                                                                      
+----------                                                                      
+       100                                                                      
+       100                                                                      
+       100                                                                      
+       101                                                                      
+       101                                                                      
+       101                                                                      
+       101                                                                      
+       101                                                                      
+       102                                                                      
+       103                                                                      
+       103                                                                      
+
+MANAGER_ID                                                                      
+----------                                                                      
+       103                                                                      
+       103                                                                      
+       108                                                                      
+       108                                                                      
+       108                                                                      
+       108                                                                      
+       108                                                                      
+       114                                                                      
+       114                                                                      
+       114                                                                      
+       114                                                                      
+
+MANAGER_ID                                                                      
+----------                                                                      
+       114                                                                      
+
+34 rows selected.
+
+SQL> SELECT MANAGER_ID,JOB_ID,SALARY FROM EMPLOYEES WHERE MANAGER_ID<120 ;
+
+MANAGER_ID JOB_ID         SALARY                                                
+---------- ---------- ----------                                                
+       100 AD_VP           17000                                                
+       100 AD_VP           17000                                                
+       102 IT_PROG          9000                                                
+       103 IT_PROG          6000                                                
+       103 IT_PROG          4800                                                
+       103 IT_PROG          4800                                                
+       103 IT_PROG          4200                                                
+       101 FI_MGR          12008                                                
+       108 FI_ACCOUNT       9000                                                
+       108 FI_ACCOUNT       8200                                                
+       108 FI_ACCOUNT       7700                                                
+
+MANAGER_ID JOB_ID         SALARY                                                
+---------- ---------- ----------                                                
+       108 FI_ACCOUNT       7800                                                
+       108 FI_ACCOUNT       6900                                                
+       100 PU_MAN          11000                                                
+       114 PU_CLERK         3100                                                
+       114 PU_CLERK         2900                                                
+       114 PU_CLERK         2800                                                
+       114 PU_CLERK         2600                                                
+       114 PU_CLERK         2500                                                
+       100 ST_MAN           8000                                                
+       100 ST_MAN           8200                                                
+       100 ST_MAN           7900                                                
+
+MANAGER_ID JOB_ID         SALARY                                                
+---------- ---------- ----------                                                
+       100 ST_MAN           6500                                                
+       100 ST_MAN           5800                                                
+       100 SA_MAN          14000                                                
+       100 SA_MAN          13500                                                
+       100 SA_MAN          12000                                                
+       100 SA_MAN          11000                                                
+       100 SA_MAN          10500                                                
+       101 AD_ASST          4400                                                
+       100 MK_MAN          13000                                                
+       101 HR_REP           6500                                                
+       101 PR_REP          10000                                                
+
+MANAGER_ID JOB_ID         SALARY                                                
+---------- ---------- ----------                                                
+       101 AC_MGR          12008                                                
+
+34 rows selected.
+
+SQL> SELECT MANAGER_ID,JOB_ID,SUM(SALARY) FROM EMPLOYEES WHERE MANAGER_ID<120 GROUP BY MANAGER_ID;
+SELECT MANAGER_ID,JOB_ID,SUM(SALARY) FROM EMPLOYEES WHERE MANAGER_ID<120 GROUP BY MANAGER_ID
+                  *
+ERROR at line 1:
+ORA-00979: not a GROUP BY expression 
+
+
+SQL> SELECT MANAGER_ID,JOB_ID,SUM(SALARY) FROM EMPLOYEES WHERE MANAGER_ID<120 GROUP BY MANAGER_ID,JOB_ID;
+
+MANAGER_ID JOB_ID     SUM(SALARY)                                               
+---------- ---------- -----------                                               
+       101 HR_REP            6500                                               
+       101 PR_REP           10000                                               
+       100 PU_MAN           11000                                               
+       108 FI_ACCOUNT       39600                                               
+       100 SA_MAN           61000                                               
+       101 AC_MGR           12008                                               
+       100 AD_VP            34000                                               
+       102 IT_PROG           9000                                               
+       100 MK_MAN           13000                                               
+       103 IT_PROG          19800                                               
+       100 ST_MAN           36400                                               
+
+MANAGER_ID JOB_ID     SUM(SALARY)                                               
+---------- ---------- -----------                                               
+       101 FI_MGR           12008                                               
+       114 PU_CLERK         13900                                               
+       101 AD_ASST           4400                                               
+
+14 rows selected.
+
+SQL> SPOOL OFF
